@@ -1,0 +1,112 @@
+body {
+	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+	height: 100vh;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-between; */
+  
+    /* align-items:; */
+    margin: 0;
+}
+*{
+    box-sizing: border-box;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+.navbar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:black;
+}
+.nav{
+    display: flex;
+    list-style: none;
+}
+.nav a{
+    text-decoration: none;
+    color: white;
+    margin: 35px;
+    border:2px solid #e73c7e;
+    padding: 2px 15px;
+    border-radius: 25px;
+
+}
+.containingcontainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+.container{
+    background-color: white;
+    width: 95vw;
+    height: 85vh;
+    border-radius: 50px;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-between; */
+    /* align-items: center; */
+    position: relative;
+}
+.query{
+    /* background-color: red; */
+    margin: 60px;
+    margin-bottom: 50px;
+    /* margito */
+    border-radius: 20px;
+    border: 4px solid;
+    width: 50vw;
+    padding: 50px;
+    padding-top: 0;
+    border-image-slice: 1;
+    border-image-source: linear-gradient(to left, #743ad5, #d53a9d);
+    /* border:2px solid linear-gradient( #743ad5, #d53a9d);; */
+    
+    
+    
+}
+.border-gradient-purple {
+  }
+
+.solution{
+    /* background-color: red; */
+    margin: 60px;
+    margin-bottom: 50px;
+    /* margito */
+    border:2px solid red;
+    border-radius: 20px;
+    padding: 50px;
+    padding-top: 0;
+    
+}
+.container h2{
+    /* justify-content: center; */
+
+    align-items: center;
+    text-align: center;
+
+}
+.container h4{
+    position: absolute;
+    right: 50px;
+    margin-top: 50px;
+    width: 30vw;
+    height: 30%;
+    border: 2px solid #e73c7e;
+}
+.summary{
+    font-weight: bolder;
+}

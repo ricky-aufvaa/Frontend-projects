@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.container{
+    display: flex;
+    flex-direction: row;
+    /* height: 80vh; */
+    width: 95vw;
+    
+}
+.pic{
+    height: 80vh;
+    width: 5vw;
+    /* flex: 0.5; */
+    margin: 10px;
+    border-radius: 50px;
+    background: center center no-repeat;
+    color: white;
+    position: relative;
+    transition: width 0.9s ease-in-out;
+    z-index: 1;
+    
+
+}
+.pic h3{
+    bottom: 10px;
+    position: absolute;
+    left: 10px;
+    margin: 10px;
+    opacity: 0;
+    transition: opacity ease-in-out 0.3s 0.5s;
+}
+.myface{
+    right: 5vw;
+    position: absolute;
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 60vh;
+    width: 30vw;
+    text-align:center;
+    padding-top: 65vh;
+
+}
+.offtext{
+    /* position: relative; */
+    font-weight: bolder;
+    font-size: small;
+    margin-top: 40vh;
+    transform: rotate(-90deg);
+    /* background-color: black; */
+    /* border-radius: 20px; */
+    text-align: center;
+    padding: 0px 0px;
+
+    font-size: 10px;
+    opacity: 1;
+    transition: opacity ease-in 0.1s;
+}
+.pic:hover{
+    opacity: 0.7;
+    cursor: pointer;
+    /* background-size: 5000%; */
+    text-shadow: 5px 5px 10px white;
+    animation: alternate ease crazy 0.4s infinite;
+}
+@keyframes crazy {
+  0%{
+      background-position: left;
+  }
+
+  25% {
+      background-position: right;
+  }
+  50% {
+      background-position: top;
+  }
+  75% {
+      background-position: bottom;
+  }
+  100% {
+      background-position: center;
+  }
+}
+
+.active{
+    border-radius: 50px;
+    /* motion: none; */
+    width: 170vw;
+    /* flex: 15; */
+    opacity: 1;
+    z-index: 1;
+    height: 90vh;
+    background: center center no-repeat;
+    transition: all 1s ease ;
+    position: relative;
+}
+.active h3{
+    bottom: 10px;
+    align-items: center;
+    position: absolute;
+    color: white;
+    left: 10px;
+    margin: 10px;
+    transition: opacity ease-in-out 0.3s 0.5s;
+    opacity: 1;
+}
+.myface.active{
+    opacity: 0;
+}
+/* offtext opacity 0 */
+.active p{
+    opacity: 0;
+}

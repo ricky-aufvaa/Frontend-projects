@@ -1,0 +1,85 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    background-color: white;
+}
+.container{
+    display: flex;
+    flex-direction: row;
+    
+    
+}
+.panel{
+    
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size:500%;
+    height: 40vh;
+    position: relative;
+    width: 8vw;
+    margin: 50px;
+    border-radius: 50px;
+    color: white;
+}
+.panel h3{
+    text-align: center;
+    transform: rotate(-90deg);
+    margin-top: 20vh;
+}
+.myphoto img{
+    height: 200px;
+    
+    margin-top: 15vh;
+    margin-left: 200px;
+}
+.myphoto h2{
+    
+    margin-left: 200px;
+
+}
+
+
+/* hover */
+.panel:hover{
+    border: 2px solid red;
+    transition: all ease-in-out 1s ;
+    cursor:pointer;
+    box-shadow: 5px 5px 10px grey;
+animation-name: shake;
+animation-duration: 0.22s;
+animation-timing-function: ease-in-out;
+animation-iteration-count: infinite;
+}
+@keyframes shake{
+    0%{
+background-position: top left;
+}
+100%{
+    background-position: top right;
+}
+}
+
+/* active class */
+.active{
+   border: 2px solid purple;
+   width: 80vw;
+   height: 100vh;
+   background-position: center;
+   position: absolute;
+   top: 0;
+   z-index: 2;
+
+   
+}
+.active h3{
+    display: none;
+}
