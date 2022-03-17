@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+        font-family: 'Roboto', sans-serif;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        /* justify-content: center;
+        align-items: center; */
+        overflow-x: hidden;
+        height: 100vh;
+        width: 100vw;
+        z-index: -2;
+        background-color: grey;
+        /* background-size:cover; */
+        
+    }
+.container::before{
+    content: "";
+    position: absolute;
+    z-index: 1;
+    height: 100vh;
+    width: 100%;
+    background-image: url('/pink.jpg');
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: 350px 400px;
+}
+.container{
+    transform: rotate(-90deg);
+    border: 2px solid black;
+    background-color: white;
+    transform-origin:top left;
+    transition: transform 0.5s linear;
+}
+.container .content{
+    margin-top: 80vh;
+    padding: 5%;
+}
+    .container h1{
+    left: 500px;
+    position: absolute;
+}
+button{
+    /* padding: 10px 10px; */
+    background-color: transparent;
+    font-size: large;
+    position: absolute;
+    top: 50%;
+    left: 20%;
+    height: 100px;
+    border: none;
+    color: white;
+}
+.circle-container{
+    /* display: inline; */
+    
+    position: absolute;
+    top: -100px;
+    left: -100px;
+}
+.circle{
+    background-color: red;
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    position: relative;
+    transition: transform 0.5s linear;
+}
+.circle button#open{
+    left: 60%;
+}
+.cirle button#close{
+    top: 60%;
+    transform: rotate(90deg);
+    transform-origin: top left;
+    /* left: 40%; */
+}
