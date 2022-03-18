@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Syne+Mono&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@700&display=swap');
 *{
     margin: 0;
     box-sizing: border-box;
@@ -14,14 +15,15 @@ body{
     height: 100vh;
     overflow: hidden;
     background-color: white;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Ubuntu', sans-serif;
+    /* font-family: 'Poppins', sans-serif; */
     
 
 }
 .container{
     display: flex;
     flex-direction: row;
-    
+    position: relative;
     
 }
 .panel{
@@ -35,21 +37,34 @@ body{
     margin: 50px;
     border-radius: 50px;
     color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
 }
 .panel h3{
+    position: absolute;
     text-align: center;
     letter-spacing: 2px;
     transform: rotate(-90deg);
-    margin-top: 20vh;
+    
     font-size: 1.2em;
 }
 
+.myphoto{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 .myphoto img{
-    height: 15rem;
-    
+    height: 13rem;
+    margin-right: 4rem;
     transition: all 0.2s ease-in-out;
-    margin-top: 10vh;
-    margin-left: 200px;
+    
+    
+    
     
 
 }
@@ -63,7 +78,8 @@ body{
 }
 .myphoto h2{
     font-family: 'Syne Mono', monospace;
-    margin-left: 200px;
+    margin-left: 1vh;
+    margin-right: 4rem;
 
 }
 
@@ -138,16 +154,17 @@ background-position: top left;
 }
 
 .nav{
-background-color: rgb(0, 0, 0);
-position: absolute;
-/* margin-top: 50px; */
-margin: 0;
-bottom: 0;
-padding: 10px 10px;
+    background-color: rgb(0, 0, 0);
+    position: absolute;
+    margin: 0;
+    bottom: 0;
+    /* margin-top: 100vh; */
+    padding: 10px 10px;
+    width: 100vw;
+    display: flex;
+    /* position: sticky; */
+    justify-content: center;
 
-
-border-start-end-radius: 100px;
-border-start-start-radius: 100px;
 }
 
 .nav ul{
@@ -161,21 +178,23 @@ border-start-start-radius: 100px;
     list-style: none;
     margin: 0;
     /* padding: 20px 40px; */
-
+    
 }
 
 .nav a{
+    /* display: inline-block */
     text-decoration: none;
     margin: 2px 5px;
     color: rgb(252, 134, 0);
-    padding: 5px 5px;
+    padding: 15px 15px;
     transition: all 0.2s ease-in-out;
+
 }
 
 .nav a:hover{
     color: rgb(255, 255, 255);
-    border:2px solid white;
-    border-radius: 30px;
+    /* border:2px solid white; */
+    /* border-radius: 30px; */
 }
 
 .opencontainer{
@@ -186,10 +205,15 @@ border-start-start-radius: 100px;
 }
 .opencontainer img{
     height: 15rem;
-    margin-top: 20vh;
-    margin-left: 200px;
+    
 
     
+}
+.opencontainer a{
+    margin-left: 10rem;
+}
+.opencontainer h2{
+    margin-left: 10vw;
 }
 .openpanel{
     width: 50vw;
@@ -203,8 +227,12 @@ border-start-start-radius: 100px;
     background-size: cover;
     background-position-y: 40%;
     background-repeat: no-repeat;
+    transition: all 0.3s ease-in-out;
     
     
+}
+.openpanel:hover{
+    box-shadow: 10px 10px 10px grey, -20px -20px 20px grey;
 }
 
 .opencontainer .text{
@@ -215,6 +243,7 @@ border-start-start-radius: 100px;
     border-radius: 3rem;
     display: flex;
     flex-flow: wrap column;
+    font-weight: bolder;
     /* justify-content: center;
     align-items: center; */
     /* width: 20%; */
@@ -229,11 +258,14 @@ border-start-start-radius: 100px;
 .opencontainer .text a{
     /* height: 20%; */
     color: white;
+    font-weight: bolder;
     border: 2px solid white;
     padding: 10px 10px;
     border-radius: 2rem;
     transition: all 0.3s ease-in-out;
     margin: 1rem;
+    background-color: rgba(128, 128, 128, 0.301);
+    
 
 }
 
@@ -261,4 +293,8 @@ border-start-start-radius: 100px;
     cursor: pointer;
 }
 
-
+.opennav {
+    padding: 0;
+    
+   
+}
