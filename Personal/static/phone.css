@@ -59,6 +59,9 @@ body{
 }
 .opencontainer h2{
     font-size: medium;
+    margin-left: 0;
+    text-align: center;
+    
 }
 
 .nav a{
